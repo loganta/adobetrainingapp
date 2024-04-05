@@ -10,8 +10,14 @@ import SideBar from './SideBar'
 import ActionsForm from './ActionsForm'
 import { Home } from './Home'
 import { About } from './About'
+import { path } from '../lib/constant'
+import { Concepts } from './TrainingReactSpectrum/Concepts'
+import { Collections } from './TrainingReactSpectrum/Collections'
+import { Buttons } from './TrainingReactSpectrum/Buttons'
+import { Form } from './TrainingReactSpectrum/Form'
+import { DateTime } from './TrainingReactSpectrum/Datetime'
 
-function App (props) {
+function App(props) {
   console.log('runtime object:', props.runtime)
   console.log('ims object:', props.ims)
 
@@ -45,13 +51,28 @@ function App (props) {
             </View>
             <View gridArea='content' padding='size-200'>
               <Switch>
-                <Route exact path='/'>
+                <Route exact path={path.HOME}>
                   <Home></Home>
                 </Route>
-                <Route path='/actions'>
+                <Route path={path.CONCEPTS}>
+                  <Concepts></Concepts>
+                </Route>
+                <Route path={path.COLLECTIONS}>
+                  <Collections></Collections>
+                </Route>
+                <Route path={path.BUTTONS}>
+                  <Buttons></Buttons>
+                </Route>
+                <Route path={path.FORM}>
+                  <Form></Form>
+                </Route>
+                <Route path={path.DATETIME}>
+                  <DateTime></DateTime>
+                </Route>
+                <Route path={path.ACTIONS}>
                   <ActionsForm runtime={props.runtime} ims={props.ims} />
                 </Route>
-                <Route path='/about'>
+                <Route path={path.ABOUT}>
                   <About></About>
                 </Route>
               </Switch>
@@ -65,10 +86,10 @@ function App (props) {
   // Methods
 
   // error handler on UI rendering failure
-  function onError (e, componentStack) { }
+  function onError(e, componentStack) { }
 
   // component to show if UI fails rendering
-  function fallbackComponent ({ componentStack, error }) {
+  function fallbackComponent({ componentStack, error }) {
     return (
       <React.Fragment>
         <h1 style={{ textAlign: 'center', marginTop: '20px' }}>

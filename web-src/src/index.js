@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom'
 import Runtime, { init } from '@adobe/exc-app'
 
 import App from './components/App'
-import './index.css'
+import '../src/css/index.css'
 
 window.React = require('react')
 /* Here you can bootstrap your application and configure the integration with the Adobe Experience Cloud Shell */
@@ -24,9 +24,9 @@ try {
   bootstrapRaw()
 }
 
-function bootstrapRaw () {
+function bootstrapRaw() {
   /* **here you can mock the exc runtime and ims objects** */
-  const mockRuntime = { on: () => {} }
+  const mockRuntime = { on: () => { } }
   const mockIms = {}
 
   // render the actual react application and pass along the runtime object to make it available to the App
@@ -36,7 +36,7 @@ function bootstrapRaw () {
   )
 }
 
-function bootstrapInExcShell () {
+function bootstrapInExcShell() {
   // get the Experience Cloud Runtime object
   const runtime = Runtime()
 
