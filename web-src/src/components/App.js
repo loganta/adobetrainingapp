@@ -16,6 +16,8 @@ import { Collections } from './TrainingReactSpectrum/Collections'
 import { Buttons } from './TrainingReactSpectrum/Buttons'
 import { Form } from './TrainingReactSpectrum/Form'
 import { DateTime } from './TrainingReactSpectrum/Datetime'
+import { ShowTable } from './TrainingReactSpectrum/Table'
+import { OTHERTOOLS } from './TrainingReactSpectrum/OtherTools'
 
 function App(props) {
   console.log('runtime object:', props.runtime)
@@ -68,6 +70,12 @@ function App(props) {
                 </Route>
                 <Route path={path.DATETIME}>
                   <DateTime></DateTime>
+                </Route>
+                <Route path={path.TABLE}>
+                  <ShowTable></ShowTable>
+                </Route>
+                <Route path={path.OTHERTOOLS}>
+                  <OTHERTOOLS></OTHERTOOLS>
                 </Route>
                 <Route path={path.ACTIONS}>
                   <ActionsForm runtime={props.runtime} ims={props.ims} />

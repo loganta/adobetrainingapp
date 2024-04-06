@@ -9,7 +9,7 @@ function SideBar() {
   return (
     <ul className="SideNav">
       <li className="SideNav-item">
-        <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" exact to="/">Home</NavLink>
+        <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" exact to="/">Learning React Spectrum</NavLink>
       </li>
       <li className="SideNav-item">
         <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/concepts">Concepts</NavLink>
@@ -25,6 +25,12 @@ function SideBar() {
       </li>
       <li className="SideNav-item">
         <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/datetime">Date and Time</NavLink>
+      </li>
+      <li className="SideNav-item">
+        <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/table">Table</NavLink>
+      </li>
+      <li className="SideNav-item">
+        <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/othertools">Other Tools</NavLink>
       </li>
       {/* <li className="SideNav-item">
         <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/actions">Your App Actions</NavLink>

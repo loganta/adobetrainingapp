@@ -7,7 +7,9 @@ export const path = {
     ABOUT: '/about',
     ACTIONS: '/actions',
     BUTTONS: '/buttons',
-    DATETIME: '/datetime'
+    DATETIME: '/datetime',
+    TABLE: '/table',
+    OTHERTOOLS: '/othertools'
 };
 
 export const languages = {
