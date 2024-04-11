@@ -79,3 +79,7 @@ and make sure you have the below config added
     }
   } 
 ```
+# How to get Token and ims_org_id
+
++ If you don't know your org_id use this command "aio config get project.org.ims_org_id"
++ the output YOUR current auth token can found with this command "aio auth login"

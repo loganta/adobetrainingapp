@@ -10,6 +10,11 @@ import Runtime, { init } from '@adobe/exc-app'
 
 import App from './components/App'
 import '../src/css/index.css'
+import { authentication } from './dev.auth'
+
+const TOKEN = authentication.ACCESS_TOKEN;
+const ImsOrgId = authentication.ims_org_id;
+const ServiceApiKey = authentication.SERVICE_API_KEY;
 
 window.React = require('react')
 /* Here you can bootstrap your application and configure the integration with the Adobe Experience Cloud Shell */
@@ -27,7 +32,12 @@ try {
 function bootstrapRaw() {
   /* **here you can mock the exc runtime and ims objects** */
   const mockRuntime = { on: () => { } }
-  const mockIms = {}
+  //user add mockIms manually
+  const mockIms = {
+    token: 'Bearer ' + TOKEN,
+    org: ImsOrgId,
+    service_api_key: ServiceApiKey
+  }
 
   // render the actual react application and pass along the runtime object to make it available to the App
   ReactDOM.render(

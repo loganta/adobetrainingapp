@@ -36,6 +36,9 @@ function SideBar() {
         <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/actions">Your App Actions</NavLink>
       </li> */}
       <li className="SideNav-item">
+        <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/todoapp">TodoApp</NavLink>
+      </li>
+      <li className="SideNav-item">
         <NavLink className="SideNav-itemLink" activeClassName="is-selected" aria-current="page" to="/about">Documentation</NavLink>
       </li>
     </ul>

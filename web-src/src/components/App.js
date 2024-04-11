@@ -18,6 +18,7 @@ import { Form } from './TrainingReactSpectrum/Form'
 import { DateTime } from './TrainingReactSpectrum/Datetime'
 import { ShowTable } from './TrainingReactSpectrum/Table'
 import { OTHERTOOLS } from './TrainingReactSpectrum/OtherTools'
+import TodoApp from './todoapp/App'
 
 function App(props) {
   console.log('runtime object:', props.runtime)
@@ -82,6 +83,9 @@ function App(props) {
                 </Route>
                 <Route path={path.ABOUT}>
                   <About></About>
+                </Route>
+                <Route path={path.TODOAPP}>
+                  <TodoApp ims={props.ims}></TodoApp>
                 </Route>
               </Switch>
             </View>

@@ -9,7 +9,8 @@ export const path = {
     BUTTONS: '/buttons',
     DATETIME: '/datetime',
     TABLE: '/table',
-    OTHERTOOLS: '/othertools'
+    OTHERTOOLS: '/othertools',
+    TODOAPP: '/todoapp'
 };
 
 export const languages = {
