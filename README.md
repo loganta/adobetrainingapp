@@ -89,3 +89,17 @@ and make sure you have the below config added
 * Full access or trial access to App Builder.
 * Project and workspaces has been created and correctly configured.
 * AIO CLI installed to run commands.
+
+# Path file dev.auth.js
+web-src/src/dev.auth.js
+
+format file: 
+export const authentication = {
+    ims_org_id: "ims_org_id_here",
+    AIO_runtime_apihost: "https://adobeioruntime.net",
+    SERVICE_API_KEY: "service_api_here",
+    WSK_CONFIG_FILE: "/var/www/adobeappbuilder/.wskprops",
+    ACCESS_TOKEN: "token_here"
+
+};
+The value like ACCESS_TOKEN , ims_org_id, SERVICE_API_KEY you can get from workspace on app builder configure.
