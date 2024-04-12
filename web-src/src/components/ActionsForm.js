@@ -69,7 +69,7 @@ const ActionsForm = (props) => {
 
           <TextArea
             label="headers"
-            placeholder='{ "key": "value" }'
+            description='{ "key": "value" }'
             validationState={state.actionHeadersValid}
             onChange={(input) =>
               setJSONInput(input, 'actionHeaders', 'actionHeadersValid')
@@ -78,7 +78,7 @@ const ActionsForm = (props) => {
 
           <TextArea
             label="params"
-            placeholder='{ "key": "value" }'
+            description='{ "key": "value" }'
             validationState={state.actionParamsValid}
             onChange={(input) =>
               setJSONInput(input, 'actionParams', 'actionParamsValid')
@@ -129,7 +129,7 @@ const ActionsForm = (props) => {
   // Methods
 
   // parses a JSON input and adds it to the state
-  async function setJSONInput (input, stateJSON, stateValid) {
+  async function setJSONInput(input, stateJSON, stateValid) {
     let content
     let validStr = null
     if (input) {
@@ -145,7 +145,7 @@ const ActionsForm = (props) => {
   }
 
   // invokes a the selected backend actions with input headers and params
-  async function invokeAction () {
+  async function invokeAction() {
     setState({ ...state, actionInvokeInProgress: true, actionResult: 'calling action ... ' })
     const actionName = state.actionSelected
     const headers = state.actionHeaders || {}

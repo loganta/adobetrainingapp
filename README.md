@@ -83,3 +83,9 @@ and make sure you have the below config added
 
 + If you don't know your org_id use this command "aio config get project.org.ims_org_id"
 + the output YOUR current auth token can found with this command "aio auth login"
+
+# Prerequisites
+* Access to Adobe Developer Console.
+* Full access or trial access to App Builder.
+* Project and workspaces has been created and correctly configured.
+* AIO CLI installed to run commands.
